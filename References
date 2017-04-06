@@ -1,3 +1,10 @@
 References :
 
 https://marcobonzanini.com/2015/10/24/building-data-pipelines-with-python-and-luigi/
+
+
+Links for scheduling job in docker using cron.
+https://getcarina.com/docs/tutorials/schedule-tasks-cron/
+https://laracasts.com/discuss/channels/servers/run-the-scheduler-in-a-docker-image
+https://www.ekito.fr/people/run-a-cron-job-with-docker/
+http://stackoverflow.com/questions/37458287/how-to-run-a-cron-job-inside-a-docker-container
