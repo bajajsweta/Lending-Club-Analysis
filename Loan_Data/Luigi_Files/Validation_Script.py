@@ -46,7 +46,7 @@ def validate_field():
     Q3['emp_length_clean'] = Q3.emp_length_clean.str.replace('year','')
     Q3['emp_length_clean'] = Q3.emp_length_clean.str.replace('n/a','-1')
     Q3['emp_length_clean'].fillna('-1',inplace=True)
-    Q3['emp_length_clean']=pd.to_numeric(df3['emp_length_clean'], errors='ignore')
+    Q3['emp_length_clean']=pd.to_numeric(Q3['emp_length_clean'], errors='ignore')
     
     Q3['title'].fillna('unknown',inplace=True)
     Q3['mths_since_last_delinq'].fillna(0,inplace=True)
