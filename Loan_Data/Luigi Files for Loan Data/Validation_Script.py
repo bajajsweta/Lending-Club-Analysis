@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[4]:
 
 import pandas as pd
 import numpy as np
@@ -10,7 +10,7 @@ import os
 
 # # Validation function
 
-# In[ ]:
+# In[5]:
 
 ## find the number of nan in each column
 #Q2.isnull().sum()

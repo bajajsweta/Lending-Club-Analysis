@@ -5,7 +5,7 @@
 
 # Filename: run_luigi.py
 import luigi
-#import Scraping_loan_data_Copy1 as myfile 
+
 import Validation_Script as validate
 import Merging_The_file_To_one_Dataset as merge_file
 
