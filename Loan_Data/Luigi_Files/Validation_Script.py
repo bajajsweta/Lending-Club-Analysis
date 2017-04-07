@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 import pandas as pd
 import numpy as np
@@ -10,7 +10,7 @@ import os
 
 # # Validation function
 
-# In[2]:
+# In[ ]:
 
 ## find the number of nan in each column
 #Q2.isnull().sum()
@@ -40,6 +40,14 @@ def validate_field():
     Q3['bc_open_to_buy'] =Q3['bc_open_to_buy'].interpolate()
     Q3['bc_util'] =Q3['bc_util'].interpolate()
     Q3['mo_sin_old_il_acct'].fillna(0,inplace=True)
+    Q3['emp_length_clean'] = Q3.emp_length.str.replace('+','')
+    Q3['emp_length_clean'] = Q3.emp_length_clean.str.replace('< 1','0')
+    Q3['emp_length_clean'] = Q3.emp_length_clean.str.replace('years','')
+    Q3['emp_length_clean'] = Q3.emp_length_clean.str.replace('year','')
+    Q3['emp_length_clean'] = Q3.emp_length_clean.str.replace('n/a','-1')
+    Q3['emp_length_clean'].fillna('-1',inplace=True)
+    Q3['emp_length_clean']=pd.to_numeric(df3['emp_length_clean'], errors='ignore')
+    
     Q3['title'].fillna('unknown',inplace=True)
     Q3['mths_since_last_delinq'].fillna(0,inplace=True)
     Q3['desc'].fillna('unknown',inplace=True)
@@ -65,4 +73,14 @@ def validate_field():
 # In[ ]:
 
 print("The end..")
+
+
+# In[ ]:
+
+
+
+
+# In[ ]:
+
+
 
