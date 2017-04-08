@@ -11,8 +11,12 @@ from boto.s3.connection import Key
 # In[7]:
 
 def uploadToS3():
-    awsKey = '*'
-    awsSecret = '*'
+	aKey = input("Enter the Key:")
+    aSKey = input("Enter the Secret Key:")
+    
+    
+    awsKey = aKey 
+    awsSecret = aSKey '
     
     conn = S3Connection(awsKey,awsSecret)
         #print(conn)
